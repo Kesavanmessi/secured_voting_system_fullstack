@@ -11,7 +11,7 @@ function ElectionDetails() {
     ],
     startTime: new Date('2024-10-01T08:00:00'), // Mock start time
     endTime: new Date('2024-10-20T18:00:00'),  // Mock end time
-    isResultPublished: false, // To be updated after backend integration
+    isResultPublished: true, // To be updated after backend integration
   });
 
   // Current date to compare with election time
@@ -19,7 +19,7 @@ function ElectionDetails() {
 
   // Logic for ongoing and finished election
   const isOngoing = currentTime >= electionDetails.startTime && currentTime <= electionDetails.endTime;
-  const isFinished = false;
+  const isFinished = true;
 
   return (
     <div className="bg-gray-800 p-10 text-white flex flex-col items-center">
@@ -52,9 +52,9 @@ function ElectionDetails() {
         <div className="text-center">
           <h2 className="text-2xl mb-4">The election has finished.</h2>
           {electionDetails.isResultPublished ? (
-            <button className="bg-yellow-500 hover:bg-yellow-400 text-white py-2 px-4 rounded">
+            <Link to='/voter-result' className="bg-yellow-500 hover:bg-yellow-400 text-white py-2 px-4 rounded">
               View Result
-            </button>
+            </Link>
           ) : (
             <p className="text-gray-400">The result is not yet published. Please check back later.</p>
           )}

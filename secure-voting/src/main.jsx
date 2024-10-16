@@ -13,6 +13,7 @@ import VoterDashboard from './VoterDashboard.jsx';
 import ElectionDetails from './ElectionDetails.jsx';
 import Home from './VoterHome.jsx'
 import VotingPage from './VotingPage.jsx';
+import VoterResultPage from './VoterResultPage.jsx';
 import './index.css';
 
 const App = () => {
@@ -73,6 +74,7 @@ const App = () => {
         <Route path="election-details" element={<ElectionDetails />} />
       </Route>
       <Route path="/voting-page" element={<VotingPage/>} />
+      <Route path="/voter-result" element={<VoterResultPage/>} />
       </Routes>
     </Router>
   );
