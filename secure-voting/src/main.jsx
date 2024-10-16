@@ -9,6 +9,10 @@ import ManageElection from './ManageElection.jsx';
 import ManageSingleElection from './ManageSingleElection.jsx'; // Import ManageSingleElection
 import ViewResults from './ViewResults.jsx';
 import AdminHome from './AdminHome.jsx';
+import VoterDashboard from './VoterDashboard.jsx';
+import ElectionDetails from './ElectionDetails.jsx';
+import Home from './VoterHome.jsx'
+import VotingPage from './VotingPage.jsx';
 import './index.css';
 
 const App = () => {
@@ -63,6 +67,12 @@ const App = () => {
           <Route path="view-results" element={<ViewResults />} />
         </Route>
         <Route path="/voter-login" element={<Login login="Voter" />} />
+        <Route path="/voter-dashboard" element={<VoterDashboard />}>
+        <Route index element={<Navigate to="home" />} />
+        <Route path="home" element={<Home />} />
+        <Route path="election-details" element={<ElectionDetails />} />
+      </Route>
+      <Route path="/voting-page" element={<VotingPage/>} />
       </Routes>
     </Router>
   );
