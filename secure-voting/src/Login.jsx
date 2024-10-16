@@ -1,11 +1,11 @@
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 function Login({ login }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-
+   const navigate = useNavigate();
   // Admin and voter credentials
   const adminCredentials = [
     { id: 1, name: 'admin1', password: 'admin123' },
@@ -33,7 +33,7 @@ function Login({ login }) {
     }
 
     if (validCredentials) {
-      window.location.href = '/admin-dashboard';  // Replace with actual next page URL
+      navigate('/admin-dashboard');  // Replace with actual next page URL
     } else {
       setErrorMessage('Invalid username or password');
       setTimeout(() => setErrorMessage(''), 5000); // Clear error message after 5 seconds
