@@ -33,7 +33,7 @@ function Login({ login }) {
     }
 
     if (validCredentials) {
-      window.location.href = '/next-page';  // Replace with actual next page URL
+      window.location.href = '/admin-dashboard';  // Replace with actual next page URL
     } else {
       setErrorMessage('Invalid username or password');
       setTimeout(() => setErrorMessage(''), 5000); // Clear error message after 5 seconds
