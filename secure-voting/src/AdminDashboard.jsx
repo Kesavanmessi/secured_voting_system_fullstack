@@ -25,11 +25,11 @@ function AdminDashboard() {
           Create Election
         </NavLink>
         <NavLink 
-          to="manage-voters" 
+          to="manage-election" 
           className={({ isActive }) => 
             isActive ? "text-2xl text-yellow-400" : "text-2xl text-blue-300 hover:text-blue-500"
           }>
-          Manage Voters
+          Manage Election
         </NavLink>
         <NavLink 
           to="view-results" 
