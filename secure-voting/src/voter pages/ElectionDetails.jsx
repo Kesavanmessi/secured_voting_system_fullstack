@@ -92,7 +92,7 @@ function ElectionDetails() {
                 canProceedToVote
                   ? 'bg-green-500 hover:bg-green-400'
                   : 'bg-gray-500 cursor-not-allowed'
-              } text-white py-2 px-4 rounded`}
+              } text-white py-2 px-4 rounded text-center`}
             >
               Proceed to Vote
             </Link>
@@ -100,7 +100,7 @@ function ElectionDetails() {
 
           {/* Message displayed for user actions */}
           {message && (
-            <p className="text-red-400 text-lg mb-4">{message}</p>
+            <p className={`text-white-400 text-lg mb-4 text-center p-1 ${message.includes("proceed")?"bg-green-500":"bg-red-500"}`}>{message}</p>
           )}
         </div>
       )}

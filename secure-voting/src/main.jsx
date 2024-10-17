@@ -1,19 +1,19 @@
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import { useState } from 'react'; // Import React and useState
-import DashBoard from './goto-dashboard.jsx';
-import Login from './Login.jsx';
-import AdminDashboard from './AdminDashboard.jsx';
-import CreateElection from './CreateElection.jsx';
-import ManageElection from './ManageElection.jsx';
-import ManageSingleElection from './ManageSingleElection.jsx'; // Import ManageSingleElection
-import ViewResults from './ViewResults.jsx';
-import AdminHome from './AdminHome.jsx';
-import VoterDashboard from './VoterDashboard.jsx';
-import ElectionDetails from './ElectionDetails.jsx';
-import Home from './VoterHome.jsx'
-import VotingPage from './VotingPage.jsx';
-import VoterResultPage from './VoterResultPage.jsx';
+import { useState } from 'react'; 
+import DashBoard from './common pages/goto-dashboard.jsx';
+import Login from './common pages/Login.jsx';
+import AdminDashboard from './admin pages/AdminDashboard.jsx';
+import CreateElection from './admin pages/CreateElection.jsx';
+import ManageElection from './admin pages/ManageElection.jsx';
+import ManageSingleElection from './admin pages/ManageSingleElection.jsx'; 
+import ViewResults from './admin pages/ViewResults.jsx';
+import AdminHome from './admin pages/AdminHome.jsx';
+import VoterDashboard from './voter pages/VoterDashboard.jsx';
+import ElectionDetails from './voter pages/ElectionDetails.jsx';
+import Home from './voter pages/VoterHome.jsx'
+import VotingPage from './voter pages/VotingPage.jsx';
+import VoterResultPage from './voter pages/VoterResultPage.jsx';
 import './index.css';
 
 const App = () => {

@@ -33,7 +33,11 @@ function Login({ login }) {
     }
 
     if (validCredentials) {
-      navigate('/admin-dashboard');  // Replace with actual next page URL
+      if(login === 'Voter')
+        navigate('/voter-dashboard');
+       // Replace with actual next page URL
+       else
+          navigate('/admin-dashboard');
     } else {
       setErrorMessage('Invalid username or password');
       setTimeout(() => setErrorMessage(''), 5000); // Clear error message after 5 seconds
