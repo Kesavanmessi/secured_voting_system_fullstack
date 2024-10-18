@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
 function ViewResults() {
   // Sample data: Replace this with your actual data fetching logic
